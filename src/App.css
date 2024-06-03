@@ -1,0 +1,131 @@
+#root {
+width: 100%;
+min-height: 100vh;
+
+display: flex;
+justify-content: center;
+align-items: center;
+}
+i{
+  cursor: pointer;
+  user-select: none;
+}
+ul{
+  list-style: none;
+  
+}
+:root{
+  --mainColor:#fff;
+  --mainLightColor:rgba(235, 235, 235, 0.5);
+  --mainDimColor:rgb(228,228,228)
+}
+body{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(4, 81, 117, 0.382);
+}
+.container{
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--mainColor);
+}
+.black-screen{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  pointer-events: none;
+  background-color: rgba(17, 17, 17, 0.2);
+}
+.music-container{
+  width: 350px;
+  padding: 35px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 36px;
+  box-shadow: 0 0 20px rgba(26, 26, 26, 0.1),
+  0 0 40px rgba(26, 26, 26, 0.1),
+  0 0 80px rgba(26, 26, 26, 0.1);
+  background-color: rgba(4, 81, 117, 0.382);
+  box-shadow: 0 0 10px var(--mainLightColor);
+  backdrop-filter: blur(15px);
+  font-weight: 600;
+}
+.music-palyer{
+  margin: 0;
+  margin-bottom: 10px;
+  color: var(--mainLightColor);
+}
+.music-head-name{
+  margin: 0;
+  margin-bottom: 10px;
+  color: var(--mainLightColor);
+}
+.music-artist-name{
+  margin: 0 auto;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.music-artist-name{
+  color: var(--mainDimColor);
+  margin: 4px 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+#song-avatar{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 18px 0;
+  position: relative;
+  cursor: pointer;
+  animation: animateAvatar .5s linear infinite;
+}
+
+@keyframes animateAvatar{
+  0%,100%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.03);
+  }
+  
+}
+  
+.music-timer-div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.musicProgressBar{
+  width: 100%;
+  margin-bottom: 16px;
+  height: 10px;
+  border-radius: 5px;
+  outline: none;
+  filter: hue-rotate(20deg);
+}
+.play-btn{
+  font-style: 32px;
+  margin: 8px 10px;
+  color: var(--mainColor);
+  cursor: pointer;
+  font-weight: 400;
+}
+.music-controlers{
+  cursor: pointer;
+  font-style: 28px;
+  color: var(--mainColor);
+  
+}
